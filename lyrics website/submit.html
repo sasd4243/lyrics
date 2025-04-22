@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Submit Lyrics - Khmer Lyrics</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <script>
+    // Prompt for password when the page loads
+    const password = prompt("Please enter the password to submit lyrics:");
+
+    // Change this to your preferred password
+    const correctPassword = "YourPassword123";
+
+    // If the password is incorrect, redirect the user to the home page
+    if (password !== correctPassword) {
+      alert("Incorrect password! Redirecting to the homepage.");
+      window.location.href = "index.html"; // Redirect to the homepage
+    }
+  </script>
+
+  <header>
+    <h1>Khmer Lyrics</h1>
+    <nav>
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="lyrics.html">All Lyrics</a></li>
+        <li><a href="submit.html">Submit</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+    <section class="submit-lyrics">
+      <h2>Submit New Lyrics</h2>
+      <p><em>(Only you should use this page. Your lyrics will be saved when you submit the form.)</em></p>
+      <form action="submit_lyrics.php" method="POST">
+        <label for="title">Title:</label><br>
+        <input type="text" id="title" name="title" required><br><br>
+
+        <label for="genre">Genre / Mood:</label><br>
+        <input type="text" id="genre" name="genre"><br><br>
+
+        <label for="lyrics">Lyrics:</label><br>
+        <textarea id="lyrics" name="lyrics" rows="10" required></textarea><br><br>
+
+        <button type="submit">Save Lyrics</button>
+      </form>
+    </section>
+  </main>
+
+  <footer>
+    <p>&copy; 2025 Khmer Lyrics. All rights reserved.</p>
+  </footer>
+</body>
+</html>
